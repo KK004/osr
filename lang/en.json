@@ -1,0 +1,49 @@
+{
+  "OSR.AbilityStr": "Strength",
+  "OSR.AbilityCon": "Constitution",
+  "OSR.AbilityDex": "Dexterity",
+  "OSR.AbilityInt": "Intelligence",
+  "OSR.AbilityWis": "Wisdom",
+  "OSR.AbilityCha": "Charisma",
+
+  "OSR.AbilityStrAbbr": "Str",
+  "OSR.AbilityConAbbr": "con",
+  "OSR.AbilityDexAbbr": "dex",
+  "OSR.AbilityIntAbbr": "int",
+  "OSR.AbilityWisAbbr": "wis",
+  "OSR.AbilityChaAbbr": "cha",
+
+  "OSR.Race": "Race",
+  "OSR.Class": "Class",
+  "OSR.Background": "Background",
+
+  "OSR.Description": "Description",
+  "OSR.Attributes": "Attributes",
+
+  "OSR.EffectCreate": "Create Effect",
+  "OSR.EffectToggle": "Toggle Effect",
+  "OSR.EffectEdit": "Edit Effect",
+  "OSR.EffectDelete": "Delete Effect",
+
+  "OSR.Add": "Add",
+
+  "OSR.AbilityModifier": "Ability Modifier",
+  "OSR.Proficiency": "Proficiency",
+  "OSR.Proficient": "Proficient",
+  "OSR.ProficiencyAbbr": "PROF",
+  "OSR.Equipped": "Equipped",
+  "OSR.Level": "Level",
+  "OSR.Health": "Health",
+  "OSR.HitPoints": "HitPoints",
+  "OSR.HitPointsCurrent": "Current Hit Points",
+  "OSR.ActionSave": "Action Save",
+  "OSR.AbilityConfigure": "Configure Ability Checks and Saving Throws",
+
+  "OSR.AbbrMod" : "Mod",
+	"OSR.AbbrSavingThrow" : "Save",
+	"OSR.SpellAttackMod" : "Attack Mod",
+	"OSR.PreparedSpells" : "Prepared spells",
+	"OSR.PreparedSpellsMax" : "Maximum for prepared spells",
+	"OSR.Components" : "Comps",
+	"OSR.SpellSchool" : "School"
+}
