@@ -26,16 +26,18 @@
         {{!-- "flex-group-center" is also defined in the _grid.scss file and it
         will add a small amount of padding, a border, and will center all of its
         child elements content and text. --}}
+        <!--div class="resource flex-group-center">
+          <label class="resource-label">{{localize "OSR.Race"}}</label>
+          <select class=""  name="system.race.value" data-type="String">
+            {{#select actor.system.race}}
+              {{#each actor.system.races as |race key|}}
+              <option value= "{{key}}" >{{race.label}}</option>
+              {{/each}}
+            {{/select}}  
+          </select>
+        </div-->
         <div class="resource flex-group-center">
           <label class="resource-label">{{localize "OSR.Race"}}</label>
-          <!--select class="selectrace"  name="system.race.value" data-type="String">
-            {{#select actor.system.race.value}}
-              {{#each actor.system.races as |race key|}}
-              <option value="{{key}}" {{race.label}}</option>
-              {{/each}}
-              <option>test</option>
-            {{/select}}  
-          </select-->
           <input
           name="system.details.race"
           type="text"

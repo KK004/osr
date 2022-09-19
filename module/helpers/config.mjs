@@ -42,6 +42,13 @@ OSR.weaponTypes = {
   improv: "OSR.WeaponImprov",
   siege: "OSR.WeaponSiege"
 };
+/* -------------------------------------------- */
+
+OSR.races = {
+  dwarf: "Dwarf",
+  elf: "Elf",
+  human: "Human"
+};
 
 /* -------------------------------------------- */
 /**
