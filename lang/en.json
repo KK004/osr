@@ -34,7 +34,7 @@
   "OSR.Equipped": "Equipped",
   "OSR.Level": "Level",
   "OSR.Health": "Health",
-  "OSR.HitPoints": "HitPoints",
+  "OSR.HitPoints": "Hit Points",
   "OSR.HitPointsCurrent": "Current Hit Points",
   "OSR.ActionSave": "Action Save",
   "OSR.AbilityConfigure": "Configure Ability Checks and Saving Throws",

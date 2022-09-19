@@ -28,13 +28,20 @@
         child elements content and text. --}}
         <div class="resource flex-group-center">
           <label class="resource-label">{{localize "OSR.Race"}}</label>
+          <!--select class="selectrace"  name="system.race.value" data-type="String">
+            {{#select actor.system.race.value}}
+              {{#each actor.system.races as |race key|}}
+              <option value="{{key}}" {{race.label}}</option>
+              {{/each}}
+              <option>test</option>
+            {{/select}}  
+          </select-->
           <input
           name="system.details.race"
           type="text"
           value="{{system.details.race}}"
           placeholder="{{localize "OSR.Race"}}"
         />
-        <!--h4 data-dtype="race">{{system.race}}</h4-->
         </div>
         <div class="resource flex-group-center">
           <label class="resource-label">{{localize "OSR.Class"}}</label>
@@ -57,6 +64,7 @@
         <div class="resource flex-group-center">
           <label class="resource-label"></label>
         </div>
+
         <div class="resource flex-group-center">
           <label for="system.attributes.hp.value" class="resource-label">{{ localize "OSR.HitPoints" }}</label>
           <div class="resource-content flexrow flex-center flex-between">
@@ -76,7 +84,7 @@
           </div>
         </div>
 
-        <div class="resource flex-group-center">
+        <!--div class="resource flex-group-center">
           <label for="system.power.value" class="resource-label">Power</label>
           <div class="resource-content flexrow flex-center flex-between">
             <input
@@ -93,7 +101,20 @@
               data-dtype="Number"
             />
           </div>
-        </div>
+        </div-->
+        <div class="resource flex-group-center">
+          <label for="system.details.ac.value" class="resource-label"
+            >AC</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.details.ac.value"
+              value="{{system.details.ac.value}}" placeholder="AC"
+              data-dtype="Number"
+            />
+          </div>
+        </div>  
 
         <div class="resource flex-group-center">
           <label for="system.details.level.value" class="resource-label"
@@ -162,7 +183,6 @@
     <a class="item" data-tab="description">Description</a>
     <a class="item" data-tab="items">Items</a>
     <a class="item" data-tab="spells">Spells</a>
-    <a class="item" data-tab="race">Race</a>
     <a class="item" data-tab="effects">Effects</a>
     
   </nav>
@@ -193,11 +213,6 @@
     {{!-- Owned Spells Tab --}}
     <div class="tab spells" data-group="primary" data-tab="spells">
       {{> "systems/osr/templates/actor/parts/actor-spells.html"}}
-    </div>
-
-    {{!-- Owned Race Tab To be hidden--}}
-    <div class="tab race" data-group="primary" data-tab="race">
-      {{> "systems/osr/templates/actor/parts/actor-race.html"}}
     </div>
 
     {{!-- Active Effects Tab --}}

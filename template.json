@@ -160,7 +160,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell", "class", "race"],
+    "types": ["item", "feature", "spell", "class"],
     "templates": {
       "base": {
         "description": ""
@@ -180,10 +180,6 @@
     "spell": {
       "templates": ["base"],
       "spellLevel": 1
-    },
-    "race": {
-      "templates": ["base"],
-      "race": ["dwarf"]
     },
     "class": {
       "templates": ["base"],

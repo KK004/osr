@@ -11,7 +11,6 @@ export async function preloadHandlebarsTemplates() {
         "systems/osr/templates/actor/parts/actor-items.hbs",
         "systems/osr/templates/actor/parts/actor-spells.hbs",
         "systems/osr/templates/actor/parts/actor-effects.hbs",
-        "systems/osr/templates/actor/parts/actor-race.hbs",
   ];
 
   const paths = {};
