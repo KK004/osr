@@ -22,13 +22,13 @@
       {{!-- The grid classes are defined in scss/global/_grid.scss. To use, use
       both the "grid" and "grid-Ncol" class where "N" can be any number from 1
       to 12 and will create that number of columns. --}}
-      <div class="resources grid grid-4col">
+      <div class="resource grid grid-4col">
         {{!-- "flex-group-center" is also defined in the _grid.scss file and it
         will add a small amount of padding, a border, and will center all of its
         child elements content and text. --}}
         <!--div class="resource flex-group-center">
           <label class="resource-label">{{localize "OSR.Race"}}</label>
-          <select class=""  name="system.race.value" data-type="String">
+          <select name="system.race" type="text">
             {{#select actor.system.race}}
               {{#each actor.system.races as |race key|}}
               <option value= "{{key}}" >{{race.label}}</option>
@@ -66,7 +66,8 @@
         <div class="resource flex-group-center">
           <label class="resource-label"></label>
         </div>
-
+</div>
+<div class="resource grid grid-5col">
         <div class="resource flex-group-center">
           <label for="system.attributes.hp.value" class="resource-label">{{ localize "OSR.HitPoints" }}</label>
           <div class="resource-content flexrow flex-center flex-between">
@@ -120,8 +121,8 @@
 
         <div class="resource flex-group-center">
           <label for="system.details.level.value" class="resource-label"
-            >{{localize "OSR.Level" }}</label
-          >
+            >{{localize "OSR.Level" }}
+          </label>
           <div class="resource-content flexrow flex-center flex-between">
             <input
               type="text"
@@ -144,6 +145,19 @@
             />
           </div>
         </div>
+        <div class="resource flex-group-center">
+          <label class="resource-label rollable" data-roll="d@hitDieTypes">Hit Dice</label>
+          
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+                type="text"
+                name="system.hitDieTypes"
+                value="{{system.hitDieTypes}}" placeholder="D"
+                data-dtype="String"
+              />
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -163,9 +177,6 @@
             </div>
             <div class="ability-modifiers value-footer">
               <span class="ability-mod rollable"  data-roll="d20+@abilities.{{id}}.mod">{{numberFormat ability.mod decimals=0 sign=true}}</span>
-              <!--input type="hidden" name="system.abilities.{{id}}.proficient" value="{{ability.proficient}}" data-dtype="Number">
-              <a class="proficiency-toggle ability-proficiency" title="{{ localize 'OSR.Proficiency' }}">
-                {{{ability.icon}}}</a-->
               <span class="ability-save rollable" data-roll="d20+@abilities.{{id}}.mod+@attributes.proficiency.value">{{localize "OSR.ProficiencyAbbr" }}</span>
             </div>
             <span class="mod-label ability-mod-label">{{ localize 'OSR.AbbrMod' }}</span>
