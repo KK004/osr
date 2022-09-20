@@ -110,9 +110,6 @@ export class OsrActorSheet extends ActorSheet {
       4: [],
       5: [],
       6: [],
-      7: [],
-      8: [],
-      9: [],
     };
 
 

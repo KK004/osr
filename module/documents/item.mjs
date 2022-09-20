@@ -55,6 +55,7 @@ export class OsrItem extends Item {
 
       // Invoke the roll and submit it to chat.
       const roll = new Roll(rollData.item.formula, rollData);
+      
       // If you need to store the value first, uncomment the next line.
       // let result = await roll.roll({async: true});
       roll.toMessage({

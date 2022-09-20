@@ -137,7 +137,7 @@
       },
       "race": {
         "value": "",
-        "label": "Race"
+        "label": ""
       },
       "races": {
         "dwarf": {
@@ -172,14 +172,17 @@
       "weight": 0,
       "bonus": 0,
       "attackStat": "str",
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)",
+      "damageFormula": "d4"
     },
     "feature": {
       "templates": ["base"]
     },
     "spell": {
       "templates": ["base"],
-      "spellLevel": 1
+      "spellLevel": 1,
+      "slotsLeft": 0,
+      "slots": 0
     },
     "class": {
       "templates": ["base"],

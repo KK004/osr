@@ -346,6 +346,9 @@
   display: -ms-flexbox;
   display: flex;
 }
+.osr .wide {
+  min-width: 15rem;
+}
 .osr .items-list .item-name h3,
 .osr .items-list .item-name h4 {
   margin: 0;

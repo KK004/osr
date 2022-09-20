@@ -47,7 +47,7 @@ OSR.weaponTypes = {
 OSR.races = {
   dwarf: "Dwarf",
   elf: "Elf",
-  human: "Human"
+  human3: "Human1"
 };
 
 /* -------------------------------------------- */

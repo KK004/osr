@@ -146,7 +146,7 @@
           </div>
         </div>
         <div class="resource flex-group-center">
-          <label class="resource-label rollable" data-roll="d@hitDieTypes">Hit Dice</label>
+          <label class="resource-label rollable" data-roll="d@hitDieTypes">Hit Dice D?</label>
           
           <div class="resource-content flexrow flex-center flex-between">
             <input
@@ -157,7 +157,27 @@
               />
           </div>
         </div>
-
+        <!--div>
+          <select class="selectrace" name="system.race.value" data-type="String">
+            {{#select system.race.value}}
+              {{#each system.races as |race key|}}
+              <option value= "{{key}}">{{race.label}}</option>
+              {{/each}}
+            {{/select}}  
+          </select>
+        </div>
+        <div class="form-group">
+                <label>Hit Dice</label>
+                <div class="form-fields">
+                    <select name="system.hitDice" data-type="String">
+                        {{#select system.hitDice}}
+                        {{#each config.hitDieTypes as |hitDice key|}}
+                        <option value="{{key}}">{{hitDice.label}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+        </div-->
       </div>
 
     </div>
