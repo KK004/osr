@@ -54,8 +54,10 @@ export class OsrActor extends Actor {
       ability.mod = Math.floor((ability.value - 10) / 2);
     }
     
+    let level = this.system.attributes.level.value;
+
         // Character proficiency bonus
-    this.system.attributes.proficiency.value = Math.floor((this.system.details.level.value + 7) / 4);
+   this.system.attributes.proficiency = Math.floor((level + 7) / 4);
    
 
   }

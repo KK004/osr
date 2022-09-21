@@ -120,33 +120,33 @@
         </div>  
 
         <div class="resource flex-group-center">
-          <label for="system.details.level.value" class="resource-label"
+          <label for="system.attributes.level.value" class="resource-label"
             >{{localize "OSR.Level" }}
           </label>
           <div class="resource-content flexrow flex-center flex-between">
             <input
               type="text"
-              name="system.details.level.value"
-              value="{{system.details.level.value}}" placeholder="{{localize "OSR.Level" }}"
+              name="system.attributes.level.value"
+              value="{{system.attributes.level.value}}" 
               data-dtype="Number"
             />
           </div>
         </div>
         <div class="resource flex-group-center">
-          <label for="system.attributes.proficiency.value" class="resource-label"
+          <label for="system.attributes.proficiency" class="resource-label"
             >{{localize "OSR.Proficiency" }}</label
           >
           <div class="resource-content flexrow flex-center flex-between">
             <input
               type="text"
-              name="system.attributes.proficiency.value"
-              value="{{system.attributes.proficiency.value}}" placeholder="{{localize "OSR.Level" }}"
+              name="system.attributes.proficiency"
+              value="{{system.attributes.proficiency}}" placeholder="{{localize "OSR.Level" }}"
               data-dtype="Number"
             />
           </div>
         </div>
         <div class="resource flex-group-center">
-          <label class="resource-label rollable" data-roll="d@hitDieTypes">Hit Dice D?</label>
+          <label class="resource-label rollable" data-roll="d@hitDieTypes" data-label="Hit Die">Hit Dice D?</label>
           
           <div class="resource-content flexrow flex-center flex-between">
             <input
@@ -196,8 +196,8 @@
               <input class="ability-score" name="system.abilities.{{id}}.value" type="text" value="{{ability.value}}" data-dtype="Number" placeholder="10">
             </div>
             <div class="ability-modifiers value-footer">
-              <span class="ability-mod rollable"  data-roll="d20+@abilities.{{id}}.mod">{{numberFormat ability.mod decimals=0 sign=true}}</span>
-              <span class="ability-save rollable" data-roll="d20+@abilities.{{id}}.mod+@attributes.proficiency.value">{{localize "OSR.ProficiencyAbbr" }}</span>
+              <span class="ability-mod rollable"  data-roll="d20+@abilities.{{id}}.mod" data-label="{{id}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+              <span class="ability-save rollable" data-roll="d20+@abilities.{{id}}.mod+@attributes.proficiency" data-label="Proficent {{id}}">{{localize "OSR.ProficiencyAbbr" }}</span>
             </div>
             <span class="mod-label ability-mod-label">{{ localize 'OSR.AbbrMod' }}</span>
             <span class="mod-label save-mod-label">{{ localize "OSR.Proficient" }}</span>

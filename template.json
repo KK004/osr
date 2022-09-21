@@ -79,6 +79,7 @@
             "units": "ft",
             "hover": false
           }
+
         },
         "details": {
           "biography": {
@@ -107,25 +108,105 @@
           }
         },
         "currency": {
-          "pp": 0,
           "gp": 0,
           "ep": 0,
           "sp": 0,
           "cp": 0
         }
       },
-      "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
+      "creature": {
+        "attributes": {
+          "attunement": {
+            "max": 3
+          },
+          "senses": {
+            "darkvision": 0,
+            "blindsight": 0,
+            "tremorsense": 0,
+            "truesight": 0,
+            "units": "ft",
+            "special": ""
+          },
+          "spellcasting": "int"
         },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
+        "details": {
+          "alignment": "",
+          "race": ""
         },
-        "biography": ""
+        "traits": {
+          "languages": {
+            "value": [],
+            "custom": ""
+          }
+        },
+        "spells": {
+          "spell1": {
+            "value": 0,
+            "override": null
+          },
+          "spell2": {
+            "value": 0,
+            "override": null
+          },
+          "spell3": {
+            "value": 0,
+            "override": null
+          },
+          "spell4": {
+            "value": 0,
+            "override": null
+          },
+          "spell5": {
+            "value": 0,
+            "override": null
+          },
+          "spell6": {
+            "value": 0,
+            "override": null
+          },
+          "spell7": {
+            "value": 0,
+            "override": null
+          },
+          "spell8": {
+            "value": 0,
+            "override": null
+          },
+          "spell9": {
+            "value": 0,
+            "override": null
+          },
+          "pact": {
+            "value": 0,
+            "override": null
+          }
+        },
+        "bonuses": {
+          "mwak": {
+            "attack": "",
+            "damage": ""
+          },
+          "rwak": {
+            "attack": "",
+            "damage": ""
+          },
+          "msak": {
+            "attack": "",
+            "damage": ""
+          },
+          "rsak": {
+            "attack": "",
+            "damage": ""
+          },
+          "abilities": {
+            "check": "",
+            "save": "",
+            "skill": ""
+          },
+          "spell":  {
+            "dc": ""
+          }
+        }
       }
     },
     "character": {
@@ -160,32 +241,106 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell", "class"],
+    "types": [
+      "item",
+      "feature",
+      "spell",
+      "class",
+      "consumable",
+      "weapon"
+    ],
     "templates": {
-      "base": {
-        "description": ""
+      "itemDescription": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": ""
+      },
+      "physicalItem": {
+        "quantity": 1,
+        "weight": 0,
+        "price": 0,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true
+      },
+      "action": {
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        }
+      },
+      "activatedEffect": {
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        }
       }
     },
     "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
+      "templates": ["itemDescription", "physicalItem"],
       "bonus": 0,
       "attackStat": "str",
       "formula": "d20 + @str.mod + ceil(@lvl / 2)",
       "damageFormula": "d4"
     },
     "feature": {
-      "templates": ["base"]
+      "templates": ["itemDescription"]
     },
     "spell": {
-      "templates": ["base"],
+      "templates": ["itemDescription"],
       "spellLevel": 1,
       "slotsLeft": 0,
-      "slots": 0
+      "slots": {
+        "value": 0,
+        "max": 0
+      }
     },
     "class": {
-      "templates": ["base"],
+      "templates": ["itemDescription"],
       "identifier": "",
       "levels": 1,
       "hitDice": "d6",
@@ -196,6 +351,20 @@
         "progression": "none",
         "ability": ""
       }
+    },
+    "consumable": {
+      "templates": ["itemDescription", "physicalItem", "activatedEffect", "action"],
+      "consumableType": "potion",
+      "uses": {
+        "autoDestroy": false
+      }
+    },
+    "weapon": {
+      "templates": ["itemDescription", "physicalItem" ,"activatedEffect", "action"],
+      "weaponType": "simpleM",
+      "baseItem": "",
+      "properties": {},
+      "proficient": true
     }
   } 
 }

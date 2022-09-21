@@ -34,6 +34,7 @@
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
+      <div class="grid grid-2col " >
       <div class="resource">
         <label class="resource-label">Roll Formula</label>
         <input type="text" name="system.formula" value="{{system.formula}}" data-dtype="String"/>
@@ -43,6 +44,7 @@
         <label class="resource-label" >Damage Formula</label>
         <input type="text" name="system.damageFormula" value="{{system.damageFormula}}" data-dtype="String" placeholder="d4"/>
       </div>
+    
 
       <div class="resouce"> 
                 <label class="resource-label">STAT</label>
@@ -57,10 +59,10 @@
                 </div>
       </div>
       <div>
-        <label class="resource-label">Bonus</label>
+        <label class="resource-label">Damage Bonus</label>
         <input type="text" name="system.bonus" value="{{system.bonus}}" data-dtype="Number"/>
       </div>
-
+    </div>
       <div>
         <label class="checkbox">
           <input type="checkbox" name="system.proficient" {{checked system.proficient}}/> {{ localize "OSR.Proficient" }}
