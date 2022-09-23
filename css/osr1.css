@@ -75,3 +75,97 @@
   --checkbox-unchecked: #D8D7D1;
   --checkbox-checked: rgba(0, 255, 0, 0.3);
 }
+@mixin element-invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@mixin hide {
+  display: none;
+}
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+.flexshrink {
+  flex: 0;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flexlarge {
+  flex: 2;
+}
+.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+.align-center {
+  justify-content: center;
+  text-align: center;
+}
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+.flexshrink {
+  flex: 0;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flexlarge {
+  flex: 2;
+}
+.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+.align-center {
+  justify-content: center;
+  text-align: center;
+}
+.window-app {
+  font-family: 'Roboto', sans-serif;
+}
+.rollable:hover,
+.rollable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
