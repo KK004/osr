@@ -1,8 +1,5 @@
-<ol class="items-list">
-  {{#each spells as |spells spellLevel|}}
-    <li class="item flexrow items-header">
-      <div class="item-name wide">Level {{spellLevel}} Spells</div>
-      <div class="item-name">Spell Slots</div>
+<div  class="resource flexrow  flex-center">
+  <div class="item-name">Spell Slots</div>
             <input
               type="text"
               name="system.spell.slots.value"
@@ -16,6 +13,14 @@
               value="{{system.spell.slots.max}}"
               data-dtype="Number"
             />
+</div>
+
+
+<ol class="items-list">
+  {{#each spells as |spells spellLevel|}}
+    <li class="item flexrow items-header">
+      <div class="item-name wide">Level {{spellLevel}} Spells</div>
+      
             <span></span>
       <div class="item-controls">
         <a class="item-control item-create" title="Create item" data-type="spell" data-spell-level="{{spellLevel}}"><i class="fas fa-plus"></i> Add LVL {{spellLevel}}</a>
