@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
+@import url(//db.onlinewebfonts.com/c/b6632de591dcc50b980ab1ffcb65c759?family=Unziale);
+
 /* Global styles */
 .window-app {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Jost', sans-serif;
+}
+
+.charname {
+  font-family: 'Unziale', sans-serif;
 }
 
 .rollable:hover,
