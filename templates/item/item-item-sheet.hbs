@@ -34,17 +34,17 @@
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
-      <div class="grid grid-2col " >
+      <div class="grid grid-3col " >
       <div class="resource">
         <label class="resource-label">Roll Formula</label>
         <input type="text" name="system.formula" value="{{system.formula}}" data-dtype="String"/>
       </div>
 
       <div class="resource">
-        <label class="resource-label" >Damage Formula</label>
-        <input type="text" name="system.damageFormula" value="{{system.damageFormula}}" data-dtype="String" placeholder="d4"/>
+        <label class="resource-label">Proficiency Bonus</label>
+        <input type="text" name="system.attributes.proficiency" value="{{system.attributes.proficiency}}" data-dtype="String"/>
       </div>
-    
+
 
       <div class="resouce"> 
                 <label class="resource-label">STAT</label>
@@ -52,11 +52,15 @@
                     <select name="system.attackStat">
                         {{#select system.attackStat}}
                         {{#each config.abilities as |ability type|}}
-                        <option value="{{type}}">{{localize ability}}</option>
+                        <option value="{{type}}">{{type}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
                 </div>
+      </div>
+      <div class="resource">
+        <label class="resource-label" >Damage Formula</label>
+        <input type="text" name="system.damageFormula" value="{{system.damageFormula}}" data-dtype="String" placeholder="d4"/>
       </div>
       <div>
         <label class="resource-label">Damage Bonus</label>
