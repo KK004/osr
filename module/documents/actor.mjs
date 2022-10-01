@@ -57,8 +57,8 @@ export class OsrActor extends Actor {
     let level = this.system.attributes.level.value;
 
         // Character proficiency bonus
-   this.system.attributes.proficiency = Math.floor((level + 7) / 4);
-   
+    this.system.attributes.proficiency = Math.floor((level + 7) / 4);
+
 
   }
     /* -------------------------------------------- */
@@ -159,6 +159,11 @@ export class OsrActor extends Actor {
     // Add level for easier access, or fall back to 0.
     if (data.attributes.level) {
       data.lvl = data.attributes.level.value ?? 0;
+    }
+
+    // Add proficency for easier access, or fall back to 0
+    if (data.attributes.proficiency) {
+      data.prof = data.attributes.proficiency ?? 0;
     }
   }
 
